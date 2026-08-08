@@ -1,2 +1,2 @@
 # Cpp-foundation
-Foundational C++ programs, logic building exercises, and academic problem-solving assignments for BCA Semester 1.
+Foundational C++ programs, logic building exercises, and problem-solving assignments as a BCA Semester 1 Student.
