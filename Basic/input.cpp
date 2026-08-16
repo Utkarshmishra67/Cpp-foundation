@@ -142,3 +142,37 @@ int main() {
 
     return 0;
 }
+
+//Question 5 ----Bank Account Calculator-------
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int Initial_balance;
+    int deposit;
+    int withdrawal;
+    double interest;
+
+    cout << "Enter initial balance: ";
+    cin >> Initial_balance;
+    cout << "Enter deposit: ";
+    cin >> deposit;
+    cout << "Enter withdrawal: ";
+    cin >> withdrawal;
+    cout << "Enter annual interest  rate: ";
+    cin >> interest;
+
+    int Balance = Initial_balance+deposit;
+    int after_withdrawal = Balance-withdrawal;
+    double Interest = after_withdrawal*interest/100;
+    double final_amt = after_withdrawal+Interest;
+
+    cout << "----------ACCOUNT SUMMARY----------" << "\n";
+    cout << "Balance after deposit: " << Balance << "\n";
+    cout << "Balance after withdrawal: " << after_withdrawal << "\n";
+    cout << "Interest: " << Interest << "\n";
+    cout << "Final Balance: " << final_amt << "\n";
+
+
+    return 0;
+}
