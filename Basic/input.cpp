@@ -31,3 +31,37 @@ int main() {
     cout << "Percentage: " << Percentage << "%";
     return 0;
 }
+
+// Question 2 Salary calculator
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string Name;
+    int salary;
+    int HRA;
+    int DA;
+    int Deduction;
+    cout << "Enter Name: ";
+    cin >> Name;
+    cout << "Enter basic salary: ";
+    cin >> salary;
+    cout << "Enter HRA: ";
+    cin >> HRA;
+    cout << "Enter DA: ";
+    cin >> DA;
+    cout << "Enter deductions: ";
+    cin >> Deduction;
+
+    int GS = salary + HRA + DA;
+    int NS = GS - Deduction;
+    int ANS = NS*12;
+
+    cout << "----- Employee Salary Details -----" << "\n";
+    cout << "Name: " << Name << "\n";
+    cout << "Basic Salary: " << salary << "\n";
+    cout << "Gross Salary: " << GS << "\n";
+    cout << "Net Salary: " << NS << "\n";
+    cout << "Annual Net Salary: " << ANS << "\n"; 
+    return 0;
+}
