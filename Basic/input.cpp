@@ -103,7 +103,7 @@ int main() {
     int Final_amount = subtotal - Discount;
 
     cout << "---------- BILL ----------" << "\n";
-    
+
     cout << "Item 1: " << item1 << "\n";
     cout << "Item 2: " << item2 << "\n";
     cout << "Item 3: " << item3 << "\n";
@@ -111,6 +111,34 @@ int main() {
     cout << "Discount: " << Discount << "\n";
     cout << "Final Amount: " << Final_amount << "\n";
 
+
+    return 0;
+}
+
+//Question 4 ----Electricity Bill Calculator-------
+#include <iostream>
+using namespace std;
+int main() {
+    int previous_reading;
+    int current_reading;
+    int cost;
+    cout << "Enter previous reading: ";
+    cin >> previous_reading;
+    cout << "Enter current reading: ";
+    cin >> current_reading;
+    cout << "Enter cost per unit: ";
+    cin >> cost;
+    int unit_consumed = current_reading-previous_reading;
+    int Basic_bill = unit_consumed*cost;
+    double service_cost = Basic_bill*0.05;
+    int final_bill = Basic_bill+service_cost;
+
+    cout << endl;
+    cout << "-------ELECTRICITY BILL-------" << "\n";
+    cout << "Unit Consumed: " << unit_consumed << "\n";
+    cout << "Basic Bill: " << Basic_bill << "\n";
+    cout << "Service Charge: " << service_cost << "\n";
+    cout << "Final Bill: " <<final_bill << "\n";
 
     return 0;
 }
