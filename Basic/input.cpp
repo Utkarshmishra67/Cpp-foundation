@@ -65,3 +65,52 @@ int main() {
     cout << "Annual Net Salary: " << ANS << "\n"; 
     return 0;
 }
+
+
+//Question 3 ----bill calculator-------
+
+#include <iostream>
+using namespace std;
+int main() {
+    int price1;
+    int price2;
+    int price3;
+    int quantity1;
+    int quantity2;
+    int quantity3;
+
+    cout << "Enter price of item 1: ";
+    cin >> price1;
+    cout << "Enter quantity: ";
+    cin >> quantity1;
+    cout << endl;
+    cout << "Enter price of item 2: ";
+    cin >> price2;
+    cout << "Enter quantity: ";
+    cin >> quantity2;
+    cout << endl;
+    cout << "Enter price of item 3: ";
+    cin >> price3;
+    cout << "Enter quantity: ";
+    cin >> quantity3;
+    cout << endl;
+
+    int item1 = price1*quantity1;
+    int item2 = price2*quantity2;
+    int item3 = price3*quantity3;
+    int subtotal = item1+item2+item3;
+    int Discount = subtotal*0.1;
+    int Final_amount = subtotal - Discount;
+
+    cout << "---------- BILL ----------" << "\n";
+    
+    cout << "Item 1: " << item1 << "\n";
+    cout << "Item 2: " << item2 << "\n";
+    cout << "Item 3: " << item3 << "\n";
+    cout << "Subtotal: " << subtotal << "\n";
+    cout << "Discount: " << Discount << "\n";
+    cout << "Final Amount: " << Final_amount << "\n";
+
+
+    return 0;
+}
