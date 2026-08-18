@@ -177,3 +177,46 @@ cout << "HRA = " << HRA << "\n";
 cout << "DA = " << DA << "\n";
 cout << "Final Salary = " << sum << "\n";
 }
+
+//Question No.6 Advance Version of Electricity Bill with fixed charges
+#include <iostream>
+using namespace std;
+
+int main() {
+    int unit;
+    int sum = 0;
+    int possible;
+    int minus;
+    cout << "Enter Your Electricity Unit: ";
+    cin >> unit;
+    if (0<=unit && 100>=unit){
+        sum = unit*5;
+    }
+    else if (100<unit && 200>=unit){
+        minus = unit-100;
+        sum = 100*5+minus*7;
+    }
+    else if (200<unit && 300>=unit){
+        minus = unit-200;
+        sum = 100*5+100*7+minus*10;
+    }
+    else if (300<unit){
+        minus = unit-300;
+        sum = 100*5+100*7+100*10+minus*15;
+    }
+if (sum>1000){
+    int discount = sum *0.05;
+    cout << "5% discount applied" << "\n";
+    cout << sum-discount+50;
+}
+else if (sum<=1000 && 0>sum){
+    int fixedCharge = sum+50;
+    cout << sum << "\n";
+    cout << "Added Fixed Charges: ";
+    cout << fixedCharge;
+}
+else{
+    cout << "Invalid Number";
+}
+    return 0;
+}
